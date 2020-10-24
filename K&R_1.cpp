@@ -1,5 +1,4 @@
-﻿#include <stdio.h>        // подключаем заголовочный файл stdio.h
-//#include "stdafx.h"
+#include <stdio.h>        
 #include <conio.h>
 #pragma warning (disable:4996)
 #include <locale.h>
@@ -11,41 +10,41 @@
 #include <math.h>
 #include <stdlib.h>
 
-//int main()
-//{
-//	int a(0), b(0), c(0);
-//	int v(0);
-//	printf("\n\t Input a,b,c: ");
-//	scanf("%d%d%d", &a, &b, &c);
-//
-//	v = a * b*c;
-//	printf("\t\t v = %d\n", v);
-//	getch();
-//	return 0;
-//}
+int main()
+{
+	int a(0), b(0), c(0);
+	int v(0);
+	printf("\n\t Input a,b,c: ");
+	scanf("%d%d%d", &a, &b, &c);
+
+	v = a * b*c;
+	printf("\t\t v = %d\n", v);
+	getch();
+	return 0;
+}
+
 
 //1.2
-//main()
-//{
-//	setlocale(LC_ALL, "Rus");
-//	float fahr, celsius;
-//	int lower, upper, step;
-//
-//	lower = 0;
-//	upper = 300;
-//	step = 20;
-//
-//	fahr = lower;
-//	
-//	printf("\t Программа преобразования температурб Фаренгейт в Цельсий\n");
-//
-//	while (fahr <= upper) {
-//		celsius = (5.0/9.0) * (fahr - 32.0);
-//		printf("%3.0f %6.1f\n", fahr, celsius);
-//		fahr = fahr + step;
-//
-//	}
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	float fahr, celsius;
+	int lower, upper, step;
 
+	lower = 0;
+	upper = 300;
+	step = 20;
+
+	fahr = lower;
+	
+	printf("\t Программа преобразования температурб Фаренгейт в Цельсий\n");
+
+	while (fahr <= upper) {
+		celsius = (5.0/9.0) * (fahr - 32.0);
+		printf("%3.0f %6.1f\n", fahr, celsius);
+		fahr = fahr + step;
+
+	}
 /*  lower = -10;
 	upper = 50;
 	step = 5;
@@ -59,713 +58,722 @@
 		printf("%3.0f\t%6.0f\n", celsius, fahr);
 		celsius = celsius + step;
 	}*/
-//
-//}
+}
+
 
 //1.3
-//main()
-//{
-//	int fahr;
-//
-//	for (fahr = 300; fahr >= 0; fahr = fahr - 20)
-//		printf("%3d %6.1f\n", fahr, (5.0 / 9.0)*(fahr - 32));
-//}
+int main()
+{
+	int fahr;
 
-//1.6
-//main()
-//{
-//	int c;
-//
-//	c = getchar() != EOF;
-//	if (c == 1)
-//		printf("1");
-//	else
-//		printf("0");
-//
-//	return 0;
-//}
+	for (fahr = 300; fahr >= 0; fahr = fahr - 20)
+		printf("%3d %6.1f\n", fahr, (5.0 / 9.0)*(fahr - 32));
+}
 
+	
+1.6
+int main()
+{
+	int c;
+
+	c = getchar() != EOF;
+	if (c == 1)
+		printf("1");
+	else
+		printf("0");
+
+	return 0;
+}
+
+	
 //1.7
-//main() 
-//{
-//	printf("EOF = %d\n\n", EOF);
-//	return 0;
-//}
+/*int main() 
+{
+	printf("EOF = %d\n\n", EOF);
+	return 0;
+}*/
 
-//main()
-//{
-//	long nc;
-//
-//	nc = 0;
-//	while (getchar() != EOF)
-//		++nc;
-//	printf("%ld\n", nc);
-//
-//	double nc;
-//
-//	for (nc = 0; getchar() != EOF; ++nc)
-//		;
-//	printf("%.0f\n", nc);
-//}
+int main()
+{
+	long nc;
+
+	nc = 0;
+	while (getchar() != EOF)
+		++nc;
+	printf("%ld\n", nc);
+
+	double nc;
+
+	for (nc = 0; getchar() != EOF; ++nc)
+		;
+	printf("%.0f\n", nc);
+}
+
 
 //1.8
-//main()
-//{
-//	int c, nl, nt, ns;
-//	nl = 0;
-//	nt = 0;
-//	ns = 0;
-//
-//	while ((c = getchar()) != EOF) {
-//		if (c == '\n')
-//			++nl;
-//		else if (c == '\t')
-//			++nt;
-//		else if (c == ' ')
-//			++ns;
-//	}
-//		printf(" lines: %d\n tabulations:%d\n spaces:%d", nl, nt, ns);
-//	return 0;
-//}
+int main()
+{
+	int c, nl, nt, ns;
+	nl = 0;
+	nt = 0;
+	ns = 0;
+
+	while ((c = getchar()) != EOF) {
+		if (c == '\n')
+			++nl;
+		else if (c == '\t')
+			++nt;
+		else if (c == ' ')
+			++ns;
+	}
+		printf(" lines: %d\n tabulations:%d\n spaces:%d", nl, nt, ns);
+	return 0;
+}
+
 
 //1.9
-//main()
-//{
-//	int c, space;
-//	space = 0;
-//
-//	while ((c = getchar()) != EOF) {
-//		if (c != ' ') {
-//			putchar(c);
-//			space = 0;
-//		}
-//		else if (c == ' ') {
-//			if (space == 0) {
-//				putchar(c);
-//				space = 1;
-//			}
-//		}
-//	}
-//	return 0;
-//}
+int main()
+{
+	int c, space;
+	space = 0;
+
+	while ((c = getchar()) != EOF) {
+		if (c != ' ') {
+			putchar(c);
+			space = 0;
+		}
+		else if (c == ' ') {
+			if (space == 0) {
+				putchar(c);
+				space = 1;
+			}
+		}
+	}
+	return 0;
+}
+
 
 //1.10
-//main()
-//{
-//	int c;
-//	while ((c = getchar()) != EOF) {
-//		if (c == '\t') {
-//			putchar('\\');
-//			putchar('t');
-//		}
-//		else if (c == '\b') {
-//			putchar('\\');
-//			putchar('b');
-//		}
-//		else
-//			putchar(c);
-//	}
-//}
+/*int main()
+{
+	int c;
+	while ((c = getchar()) != EOF) {
+		if (c == '\t') {
+			putchar('\\');
+			putchar('t');
+		}
+		else if (c == '\b') {
+			putchar('\\');
+			putchar('b');
+		}
+		else
+			putchar(c);
+	}
+}*/
 
-//#define IN 1
-//#define OUT 0
-//
-//main()
-//{
-//	int c, state;
-//	state = OUT;
-//
-//	while ((c = getchar()) != EOF) {
-//		if (c != ' ' && c != '\n' && c != '\t') {
-//			state = IN;
-//			putchar(c);
-//		}
-//		else if (state == IN) {
-//			state = OUT;
-//			putchar('\n');
-//		}
-//	}
-//	return 0;
-//}
+/#define IN 1
+#define OUT 0
+
+int main()
+{
+	int c, state;
+	state = OUT;
+
+	while ((c = getchar()) != EOF) {
+		if (c != ' ' && c != '\n' && c != '\t') {
+			state = IN;
+			putchar(c);
+		}
+		else if (state == IN) {
+			state = OUT;
+			putchar('\n');
+		}
+	}
+	return 0;
+}
+
 
 //1.6
-//main() {
-//	int c, i, nwhite, nother;
-//	int ndigit[10];
-//
-//	nwhite = nother = 0;
-//	for (i = 0; i < 10; ++i)
-//		ndigit[i] = 0;
-//
-//	while ((c = getchar()) != EOF) {
-//		if (c >= '0' && c <= '9')
-//			++ndigit[c - '0'];
-//		else if (c == ' ' || c == '\n' || c == '\t')
-//			++nwhite;
-//		else
-//			++nother;
-//	}
-//	printf("digits =");
-//
-//	for (i = 0; i < 10; ++i)
-//		printf(" %d", ndigit[i]);
-//
-//	printf(", white space = %d, other = %d\n", nwhite, nother);
-//
-//	return 0;
-//}
+/*int main() {
+	int c, i, nwhite, nother;
+	int ndigit[10];
+
+	nwhite = nother = 0;
+	for (i = 0; i < 10; ++i)
+		ndigit[i] = 0;
+
+	while ((c = getchar()) != EOF) {
+		if (c >= '0' && c <= '9')
+			++ndigit[c - '0'];
+		else if (c == ' ' || c == '\n' || c == '\t')
+			++nwhite;
+		else
+			++nother;
+	}
+	printf("digits =");
+
+	for (i = 0; i < 10; ++i)
+		printf(" %d", ndigit[i]);
+
+	printf(", white space = %d, other = %d\n", nwhite, nother);
+
+	return 0;
+}*/
 
 
-//#define MAX 10
-//main()
-//{
-//	int c, i, j, ncw;
-//	int wlength[MAX];
-//
-//	ncw = 0;
-//	for (i = 0; i < MAX; ++i)
-//		wlength[i] = 0;
-//
-//	while ((c = getchar()) != EOF) {
-//		if (c == ' ' || c == '\n' || c == '\t') {
-//			wlength[ncw] = wlength[ncw] + 1;
-//			ncw = 0;
-//		}
-//		else
-//			++ncw;
-//		}
-//
-//	for (i = 0; i < MAX; ++i)
-//		printf("%d", i);
-//		printf("\n");
-//
-//	for (i = 0; i < MAX; ++i) {
-//		printf("%d : ", i);
-//		for (j = 1; j <= wlength[i]; ++j)
-//			printf("-");
-//		printf(" %d\n", wlength[i]);
-//	}
-//
-//	return 0;
-//}
+/*#define MAX 10
+int main()
+{
+	int c, i, j, ncw;
+	int wlength[MAX];
 
-//#define MAX 12
-//main()
-//{
-//	int c, i, j;
-//	int various_char[MAX];
-//
-//	for (i = 0; i < MAX; ++i)
-//		various_char[i] = 0;
-//
-//	while ((c = getchar()) != EOF) {
-//		if (c >= '0' && c <= '9')
-//			++various_char[c - '0'];
-//		else if (c == ' ' || c == '\n' || c == '\t')
-//			++various_char[10];
-//		else
-//			++various_char[11];
-//		}
-//
-//	for (i = 0; i < MAX; ++i) {
-//		printf("%d : ", i);
-//		for (j = 1; j <= various_char[i]; ++j)
-//			printf("-");
-//		printf(" %d\n", various_char[i]);
-//	}
-//
-//	return 0;
-//}
-//int power(int m, int n);
-//
-//main()
-//{
-//	int i;
-//
-//	for (i = 0; i < 10; ++i)
-//		printf("%d %d %d\n", i, power(2, i), power(-3, i));
-//	return 0;
-//}
-//
-//int power(int base, int n)
-//{
-//	int i, p;
-//
-//	p = 1;
-//	for (i = 1; i <= n; ++i)
-//		p = p * base;
-//	return p;
-//}
+	ncw = 0;
+	for (i = 0; i < MAX; ++i)
+		wlength[i] = 0;
+
+	while ((c = getchar()) != EOF) {
+		if (c == ' ' || c == '\n' || c == '\t') {
+			wlength[ncw] = wlength[ncw] + 1;
+			ncw = 0;
+		}
+		else
+			++ncw;
+		}
+
+	for (i = 0; i < MAX; ++i)
+		printf("%d", i);
+		printf("\n");
+
+	for (i = 0; i < MAX; ++i) {
+		printf("%d : ", i);
+		for (j = 1; j <= wlength[i]; ++j)
+			printf("-");
+		printf(" %d\n", wlength[i]);
+	}
+
+	return 0;
+}*/
+
+/*#define MAX 12
+int main()
+{
+	int c, i, j;
+	int various_char[MAX];
+
+	for (i = 0; i < MAX; ++i)
+		various_char[i] = 0;
+
+	while ((c = getchar()) != EOF) {
+		if (c >= '0' && c <= '9')
+			++various_char[c - '0'];
+		else if (c == ' ' || c == '\n' || c == '\t')
+			++various_char[10];
+		else
+			++various_char[11];
+		}
+
+	for (i = 0; i < MAX; ++i) {
+		printf("%d : ", i);
+		for (j = 1; j <= various_char[i]; ++j)
+			printf("-");
+		printf(" %d\n", various_char[i]);
+	}
+
+	return 0;
+}*/
+
+int power(int m, int n);
+
+int main()
+{
+	int i;
+
+	for (i = 0; i < 10; ++i)
+		printf("%d %d %d\n", i, power(2, i), power(-3, i));
+	return 0;
+}
+
+int power(int base, int n)
+{
+	int i, p;
+
+	p = 1;
+	for (i = 1; i <= n; ++i)
+		p = p * base;
+	return p;
+}
 
 
 //1.15
-//main()
-//{
-//	int fahr;
-//
-//	for (fahr = 0; fahr <= 300; fahr = fahr + 20)
-//		printf("%3d %6.1f\n", fahr, (5.0 / 9.0)*(fahr - 32));
-//	return 0;
-//}
-//
-//float celsius(float f)
-//{
-//	return (5.0 / 9.0)*(f - 32);
-//}
+int main()
+{
+	int fahr;
 
-//#define MAXLINE 1000
-////#define MAXLINE 80
-//
-//int cutSpacesInLines(char line[], int maxline);
-////int getline(char line[], int maxline);
-//void copy(char to[], char from[]);
+	for (fahr = 0; fahr <= 300; fahr = fahr + 20)
+		printf("%3d %6.1f\n", fahr, (5.0 / 9.0)*(fahr - 32));
+	return 0;
+}
+
+float celsius(float f)
+{
+	return (5.0 / 9.0)*(f - 32);
+}
+
+#define MAXLINE 1000
+//#define MAXLINE 80
+
+int cutSpacesInLines(char line[], int maxline);
+//int getline(char line[], int maxline);
+void copy(char to[], char from[]);
+
 
 //1.16
-//main()
-//{
-//	int len, count;
-//	char line[MAXLINE];
-//	char longest[MAXLINE];
-//
-//	count = 0;
-//
-//	while ((len = getline(line, MAXLINE)) > 0) {
-//		if ((len - 1) > 80) {
-//			copy(longest, line);
-//			count = count + len;
-//			}
-//		}
-//			if (count > 80)
-//				printf("Lines longer than 80 symbols:%s", longest, count);
-//			else
-//				printf("There isn't lines longer than 80 symbols.\n");
-//	/*}*/
-//	return 0;
-//}
+int main()
+{
+	int len, count;
+	char line[MAXLINE];
+	char longest[MAXLINE];
+
+	count = 0;
+
+	while ((len = getline(line, MAXLINE)) > 0) {
+		if ((len - 1) > 80) {
+			copy(longest, line);
+			count = count + len;
+			}
+		}
+			if (count > 80)
+				printf("Lines longer than 80 symbols:%s", longest, count);
+			else
+				printf("There isn't lines longer than 80 symbols.\n");
+	}
+	return 0;
+}
+
 
 //1.17
-//main()
-//{
-//	int len;
-//	int max;
-//	char line[MAXLINE];
-//	char longest[MAXLINE];
-//	max = 0;
-//
-//	while ((len = getline(line, MAXLINE)) > 0) {
-//		if (len == MAXLINE - 1) {
-//			printf("%s", line);
-//			while (len == MAXLINE - 1) {
-//				len = getline(line, MAXLINE);
-//				printf("%s", line);
-//			}
-//		}
-//	}
-//	return 0;
-//}
+int main()
+{
+	int len;
+	int max;
+	char line[MAXLINE];
+	char longest[MAXLINE];
+	max = 0;
+
+	while ((len = getline(line, MAXLINE)) > 0) {
+		if (len == MAXLINE - 1) {
+			printf("%s", line);
+			while (len == MAXLINE - 1) {
+				len = getline(line, MAXLINE);
+				printf("%s", line);
+			}
+		}
+	}
+	return 0;
+}
+
 
 //1.18
-//main()
-//{
-//	char line[MAXLINE];
-//
-//	while ((cutSpacesInLines(line, MAXLINE)) > 0)
-//			printf("%s", line);
-//	return 0;
-//}
-//
-//int cutSpacesInLines(char s[], int lim)
-//{
-//	int c, i;
-//
-//	for (i = 0; i < lim - 1 && (c = getchar()) != EOF; ++i) {
-//		if (c == '\t')
-//			c = ' ';
-//		if ((c == ' ') || (c == '\n')) {
-//			if ((i > 0) && (s[i - 1] == c))
-//				--i;
-//		}
-//		s[i] = c;
-//	}
-//	s[i] = '\0';
-//
-//	return i;
-//}
-//
-//int getline(char s[], int lim)
-//{
-//	int c, i;
-//
-//	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
-//		s[i] = c;
-//	if (c == '\n') {
-//		s[i] = c;
-//		++i;
-//	}
-//	s[i] = '\0';
-//	return i;
-//}
-//
-//
-//void copy(char to[], char from[])
-//{
-//	int i;
-//
-//	i = 0;
-//	while ((to[i] = from[i]) != '\0')
-//		++i;
-//}
+int main()
+{
+	char line[MAXLINE];
+
+	while ((cutSpacesInLines(line, MAXLINE)) > 0)
+			printf("%s", line);
+	return 0;
+}
+
+int cutSpacesInLines(char s[], int lim)
+{
+	int c, i;
+
+	for (i = 0; i < lim - 1 && (c = getchar()) != EOF; ++i) {
+		if (c == '\t')
+			c = ' ';
+		if ((c == ' ') || (c == '\n')) {
+			if ((i > 0) && (s[i - 1] == c))
+				--i;
+		}
+		s[i] = c;
+	}
+	s[i] = '\0';
+
+	return i;
+}
+
+int getline(char s[], int lim)
+{
+	int c, i;
+
+	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
+		s[i] = c;
+	if (c == '\n') {
+		s[i] = c;
+		++i;
+	}
+	s[i] = '\0';
+	return i;
+}
+
+
+void copy(char to[], char from[])
+{
+	int i;
+
+	i = 0;
+	while ((to[i] = from[i]) != '\0')
+		++i;
+}
+
 
 //1.19
+#define MAXLINE 1000
 
-//#define MAXLINE 1000
-//
-//int reverseLines(char line[], int maxline);
-//void reverse(char line[]);
-//
-//main()
-//{
-//	char line[MAXLINE];
-//
-//	while ((reverseLines(line, MAXLINE)) > 0)
-//			printf("%s\n", line);
-//	return 0;
-//}
-//
-//void reverse(char s[])
-//{
-//	int i, j, tempor;
-//	i = 0;
-//	while (s[i] != '\0')
-//		i++;
-//	i--;
-//	if (s[i] != '\n')
-//		i--;
-//	printf("\n");
-//
-//	for (j = i - 1; j > i / 2 - 1; j--) {
-//		tempor = s[j];
-//		s[j] = s[i - j - 1];
-//		s[i - j - 1] = tempor;
-//	}
-//}
-//
-//int reverseLines(char s[], int lim)
-//{
-//	int c, i;
-//	
-//	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
-//		s[i] = c;
-//	if (c == '\n') {
-//		s[i] = c;
-//		++i;
-//	}
-//	s[i] = '\0';
-//	reverse(s);
-//	return i;
-//}
+int reverseLines(char line[], int maxline);
+void reverse(char line[]);
 
+int main()
+{
+	char line[MAXLINE];
+
+	while ((reverseLines(line, MAXLINE)) > 0)
+			printf("%s\n", line);
+	return 0;
+}
+
+void reverse(char s[])
+{
+	int i, j, tempor;
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	i--;
+	if (s[i] != '\n')
+		i--;
+	printf("\n");
+
+	for (j = i - 1; j > i / 2 - 1; j--) {
+		tempor = s[j];
+		s[j] = s[i - j - 1];
+		s[i - j - 1] = tempor;
+	}
+}
+
+int reverseLines(char s[], int lim)
+{
+	int c, i;
+	
+	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
+		s[i] = c;
+	if (c == '\n') {
+		s[i] = c;
+		++i;
+	}
+	s[i] = '\0';
+	reverse(s);
+	return i;
+}
+
+		
 //1.10
-//#define MAXLINE 1000
-//
-//int max;
-//char line[MAXLINE];
-//char longest[MAXLINE];
-//
-//
-//int geline(void);
-//void copy(void);
-//
-//main()
-//{
-//	int len;
-//	extern int max;
-//	extern char longest[MAXLINE];
-//
-//	max = 0;
-//
-//	while ((len = getline()) > 0)
-//		if (len > max) {
-//			max = len;
-//			copy();
-//			}
-//		if (max > 0)
-//				printf("%s", longest);
-//	return 0;
-//}
-//
-//int getline(void)
-//{
-//	int c, i;
-//	extern char line[];
-//
-//	for (i = 0; i < MAXLINE - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
-//		line[i] = c;
-//	if (c == '\n') {
-//		line[i] = c;
-//		++i;
-//	}
-//	line[i] = '\0';
-//	return i;
-//}
-//
-//
-//void copy(void)
-//{
-//	int i;
-//	extern char line[], longest[];
-//
-//	i = 0;
-//	while ((longest[i] = line[i]) != '\0')
-//		++i;
-//}
+/*#define MAXLINE 1000
 
-//#define MAXLINE 100
-//#define TABVALUE 8
-//
-//int turnTabsToSpaces(char line[], int maxline);
-//
-//main()
-//{
-//	char line[MAXLINE];
-//
-//	while ((turnTabsToSpaces(line, MAXLINE)) > 0)
-//			printf("%s", line);
-//	return 0;
-//}
-//
-//int turnTabsToSpaces(char s[], int lim)
-//{
-//	int i, j, c, countSpaces;
-//
-//	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
-//		if (c == '\t') {
-//			i--;
-//			countSpaces = (TABVALUE - ((i + 1) % TABVALUE));
-//			for (j = 0; j < countSpaces; j++) {
-//				i++;
-//				s[i] = '.';
-//			}
-//		} else 
-//			s[i] = c;
-//
-//		if (c == '\n') {
-//			s[i] = c;
-//			i++;
-//	}
-//	s[i] = '\0';
-//	return i;
-//}
+int max;
+char line[MAXLINE];
+char longest[MAXLINE];
+
+
+int geline(void);
+void copy(void);
+
+int main()
+{
+	int len;
+	extern int max;
+	extern char longest[MAXLINE];
+
+	max = 0;
+
+	while ((len = getline()) > 0)
+		if (len > max) {
+			max = len;
+			copy();
+			}
+		if (max > 0)
+				printf("%s", longest);
+	return 0;
+}
+
+int getline(void)
+{
+	int c, i;
+	extern char line[];
+
+	for (i = 0; i < MAXLINE - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
+		line[i] = c;
+	if (c == '\n') {
+		line[i] = c;
+		++i;
+	}
+	line[i] = '\0';
+	return i;
+}
+
+
+void copy(void)
+{
+	int i;
+	extern char line[], longest[];
+
+	i = 0;
+	while ((longest[i] = line[i]) != '\0')
+		++i;
+}
+
+#define MAXLINE 100
+#define TABVALUE 8
+
+int turnTabsToSpaces(char line[], int maxline);
+
+int main()
+{
+	char line[MAXLINE];
+
+	while ((turnTabsToSpaces(line, MAXLINE)) > 0)
+			printf("%s", line);
+	return 0;
+}
+
+int turnTabsToSpaces(char s[], int lim)
+{
+	int i, j, c, countSpaces;
+
+	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
+		if (c == '\t') {
+			i--;
+			countSpaces = (TABVALUE - ((i + 1) % TABVALUE));
+			for (j = 0; j < countSpaces; j++) {
+				i++;
+				s[i] = '.';
+			}
+		} else 
+			s[i] = c;
+
+		if (c == '\n') {
+			s[i] = c;
+			i++;
+	}
+	s[i] = '\0';
+	return i;
+}*/
 
 //1.22
+/*#define MAXLINE 50
+#define TABVALUE 8
 
-//#define MAXLINE 50
-////#define TABVALUE 8
-//
-//int longToShortLines(char line[], int maxline);
-//
-//main()
-//{
-//	char line[MAXLINE];
-//	int charOnNextLine = 0;
-//
-//	while ((charOnNextLine = longToShortLines(line, MAXLINE - charOnNextLine)) > 0)
-//			printf("%s", line);
-//	return 0;
-//}
-//
-//int longToShortLines(char s[], int lim)
-//{
-//	int i, j, c, lastSpace, onNewLine;
-//	j = lim - 1;
-//	lastSpace = 0;
-//	onNewLine = 1;
-//
-//	for (i = 0; i < lim - 3 && (c = getchar()) != EOF && c != '\n'; ++i) {
-//		if ((c == ' ') || (c == '\t'))
-//			lastSpace = i;
-//		s[i] = c;
-//	}
-//	if (c == '\n') {
-//		s[i] = c;
-//		i++;
-//	}
-//	if (i > lim - 4) {
-//		s[i] = '-';
-//		i++;
-//		s[i] = '\n';
-//		i++;
-//	}
-//	else {
-//		onNewLine = MAXLINE - 1 - lastSpace;
-//		for (j = lim - 1; j > lastSpace + 1; --j) {
-//			s[j] = s[j - 1];
-//		}
-//		s[j - 1] = '\n';
-//	}
-//	s[i] = '\0';
-//	return onNewLine;
-//}
+int longToShortLines(char line[], int maxline);
 
-//#define MAXLINE 50   /* максимальная длина строки ввода */
-//#define LINEWIDTH 30 /* максимальная длина строки вывода */
-//#define BORDER 5     /* ширина правого края строки вывода */
-//
-//int getline(char line[], int maxline);
-//void justify(char to[], char from[]);
-//
-//int len; /* длина текущей строки */
-//
-//int main()
-//{
-//	char line[MAXLINE]; /* текущая строка */
-//	char newline[MAXLINE]; /* преобразованная строка */
-//
-//	printf("0123456789ABCDEF\n"); // шкала позиций символов    
-//	len = 0;
-//	while ((len = getline(line, MAXLINE)) > 0) {
-//		justify(newline, line);
-//		printf("%s\n", newline);
-//	}
-//	return 0;
-//}
-//
-///* justify: формирует из строкИ 'from' стрОки, выровненные
-// *          по правому краю в 'to'                         */
-//void justify(char to[], char from[])
-//{
-//	int i, j, c, ns, nstmp, start;
-//
-//	j = ns = nstmp = start = 0;
-//	while (len - ns > LINEWIDTH) {
-//		ns += LINEWIDTH;
-//		for (i = ns - BORDER; i < ns; ++i) {
-//			c = from[i];
-//			if (c == ' ' || c == '\t' || c == '\n') {
-//				nstmp = i;
-//			}
-//		}
-//		if (nstmp > ns - BORDER)
-//			ns = nstmp + 1;
-//		for (i = start; i < ns - 1; ++i, ++j)
-//			to[j] = from[i];
-//		to[ns - 1] = '\n';
-//		++j;
-//		start = ns;
-//	}
-//	i = ns;
-//	while ((to[j] = from[i]) != '\0') {
-//		++i;
-//		++j;
-//	}
-//}
-//
-//int getline(char s[], int lim)
-//{
-//	int c, i;
-//
-//	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
-//		s[i] = c;
-//	if (i == lim - 2) {
-//		s[i] = '\n';
-//		++i;
-//	}
-//	s[i] = '\0';
-//	return i;
-//}
+int main()
+{
+	char line[MAXLINE];
+	int charOnNextLine = 0;
 
+	while ((charOnNextLine = longToShortLines(line, MAXLINE - charOnNextLine)) > 0)
+			printf("%s", line);
+	return 0;
+}
+
+int longToShortLines(char s[], int lim)
+{
+	int i, j, c, lastSpace, onNewLine;
+	j = lim - 1;
+	lastSpace = 0;
+	onNewLine = 1;
+
+	for (i = 0; i < lim - 3 && (c = getchar()) != EOF && c != '\n'; ++i) {
+		if ((c == ' ') || (c == '\t'))
+			lastSpace = i;
+		s[i] = c;
+	}
+	if (c == '\n') {
+		s[i] = c;
+		i++;
+	}
+	if (i > lim - 4) {
+		s[i] = '-';
+		i++;
+		s[i] = '\n';
+		i++;
+	}
+	else {
+		onNewLine = MAXLINE - 1 - lastSpace;
+		for (j = lim - 1; j > lastSpace + 1; --j) {
+			s[j] = s[j - 1];
+		}
+		s[j - 1] = '\n';
+	}
+	s[i] = '\0';
+	return onNewLine;
+}*/
+
+#define MAXLINE 50   /* максимальная длина строки ввода */
+#define LINEWIDTH 30 /* максимальная длина строки вывода */
+#define BORDER 5     /* ширина правого края строки вывода */
+
+int getline(char line[], int maxline);
+void justify(char to[], char from[]);
+
+int len; /* длина текущей строки */
+
+int main()
+{
+	char line[MAXLINE]; /* текущая строка */
+	char newline[MAXLINE]; /* преобразованная строка */
+
+	printf("0123456789ABCDEF\n"); // шкала позиций символов    
+	len = 0;
+	while ((len = getline(line, MAXLINE)) > 0) {
+		justify(newline, line);
+		printf("%s\n", newline);
+	}
+	return 0;
+}
+
+/* justify: формирует из строкИ 'from' стрОки, выровненные по правому краю в 'to'*/
+void justify(char to[], char from[])
+{
+	int i, j, c, ns, nstmp, start;
+
+	j = ns = nstmp = start = 0;
+	while (len - ns > LINEWIDTH) {
+		ns += LINEWIDTH;
+		for (i = ns - BORDER; i < ns; ++i) {
+			c = from[i];
+			if (c == ' ' || c == '\t' || c == '\n') {
+				nstmp = i;
+			}
+		}
+		if (nstmp > ns - BORDER)
+			ns = nstmp + 1;
+		for (i = start; i < ns - 1; ++i, ++j)
+			to[j] = from[i];
+		to[ns - 1] = '\n';
+		++j;
+		start = ns;
+	}
+	i = ns;
+	while ((to[j] = from[i]) != '\0') {
+		++i;
+		++j;
+	}
+}
+
+int getline(char s[], int lim)
+{
+	int c, i;
+
+	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
+		s[i] = c;
+	if (i == lim - 2) {
+		s[i] = '\n';
+		++i;
+	}
+	s[i] = '\0';
+	return i;
+}
+
+	
 //1.23
+#define MAXLINE 50
 
-//#define MAXLINE 50
-//
-//int getLinesWithoutComments(char line[], int maxLine);
-//
-//main() 
-//{
-//	char line[MAXLINE];
-//
-//	while ((getLinesWithoutComments(line, MAXLINE)) > 0)
-//		printf("%s", line);
-//	return 0;
-//}
-//
-//int getLinesWithoutComments(char s[], int lim) 
-//{
-//	int c, i;
-//	int instructions = 1;
-//	int previusChar = 0;
-//
-//	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && !((c == '\n') && (instructions)); ++i) {
-//		if (instructions) // программа - пишем в массив
-//			s[i] = c;
-//		else              // комментарии, - тормозим цикл
-//			i--;
-//		
-//		if ((c == '*') && (previusChar == '/')) {
-//			instructions = 0; i--;
-//		}
-//		else if ((c == '/') && (previusChar == '*')) {
-//			instructions = 1; i--;
-//		}
-//		previusChar = c;
-//	}
-//
-//	if (c == '\n') {
-//		s[i] = c;
-//		i++;
-//	}
-//	s[i] = '\0';
-//	return i;
-//}
+int getLinesWithoutComments(char line[], int maxLine);
 
+int main() 
+{
+	char line[MAXLINE];
+
+	while ((getLinesWithoutComments(line, MAXLINE)) > 0)
+		printf("%s", line);
+	return 0;
+}
+
+int getLinesWithoutComments(char s[], int lim) 
+{
+	int c, i;
+	int instructions = 1;
+	int previusChar = 0;
+
+	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && !((c == '\n') && (instructions)); ++i) {
+		if (instructions) // программа - пишем в массив
+			s[i] = c;
+		else              // комментарии, - тормозим цикл
+			i--;
+		
+		if ((c == '*') && (previusChar == '/')) {
+			instructions = 0; i--;
+		}
+		else if ((c == '/') && (previusChar == '*')) {
+			instructions = 1; i--;
+		}
+		previusChar = c;
+	}
+
+	if (c == '\n') {
+		s[i] = c;
+		i++;
+	}
+	s[i] = '\0';
+	return i;
+}
+
+	
 //1.24
+#define MAXLINE 50 /* */
 
-//#define MAXLINE 50 /* */
-//
-//int preProcessingNextString(char line[], int charCount[], int maxLine);
-//
-//main() 
-//{
-//	char line[MAXLINE]; /* текущая строка */
-//	int charCount[7] = { 0, 0, 0, 0, 0, 0, 0 };
-//	/* 0. previusChar 1. () 2. {} 3.[] 4." " 5. ' ' 6. / * * /  */
-//	while ((preProcessingNextString(line, charCount, MAXLINE)) > 0);
-//	//printf("%s", line);
-//	printf("Unpaired elements ():%i, {}:%i, []:%i, \":%i, \':%i, /**/:%i\n",
-//		charCount[1], charCount[2], charCount[3], charCount[4] - (charCount[4] / 2) * 2,
-//		charCount[5] - (charCount[5] / 2) * 2, charCount[6]);
-//	return 0;
-//}
-//
-//int preProcessingNextString(char s[], int charCount[], int lim) 
-//{
-//	int c, i;
-//
-//	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
-//		s[i] = c;
-//		if (c == '(') charCount[1]++; else if (c == ')') charCount[1]--;
-//		if (c == '{') charCount[2]++; else if (c == '}') charCount[2]--;
-//		if (c == '[') charCount[3]++; else if (c == ']') charCount[3]--;
-//		if ((c == '\"') && (charCount[0] != '\\')) charCount[4]++;
-//		if ((c == '\'') && (charCount[0] != '\\')) charCount[5]++;
-//		if ((c == '*') && (charCount[0] == '/'))
-//			charCount[6]++;
-//		else if ((c == '/') && (charCount[0] == '*'))
-//			charCount[6]--;
-//		if ((c == '\\') && (charCount[0] == '\\')) c = ' ';
-//		charCount[0] = c;
-//	}
-//
-//	if (c == '\n') {
-//		s[i] = c;
-//		i++;
-//	}
-//	s[i] = '\0';
-//	return i;
-//}
+int preProcessingNextString(char line[], int charCount[], int maxLine);
 
+int main() 
+{
+	char line[MAXLINE]; /* текущая строка */
+	int charCount[7] = { 0, 0, 0, 0, 0, 0, 0 };
+	/* 0. previusChar 1. () 2. {} 3.[] 4." " 5. ' ' 6. / * * /  */
+	while ((preProcessingNextString(line, charCount, MAXLINE)) > 0);
+	//printf("%s", line);
+	printf("Unpaired elements ():%i, {}:%i, []:%i, \":%i, \':%i, /**/:%i\n",
+		charCount[1], charCount[2], charCount[3], charCount[4] - (charCount[4] / 2) * 2,
+		charCount[5] - (charCount[5] / 2) * 2, charCount[6]);
+	return 0;
+}
+
+int preProcessingNextString(char s[], int charCount[], int lim) 
+{
+	int c, i;
+
+	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
+		s[i] = c;
+		if (c == '(') charCount[1]++; else if (c == ')') charCount[1]--;
+		if (c == '{') charCount[2]++; else if (c == '}') charCount[2]--;
+		if (c == '[') charCount[3]++; else if (c == ']') charCount[3]--;
+		if ((c == '\"') && (charCount[0] != '\\')) charCount[4]++;
+		if ((c == '\'') && (charCount[0] != '\\')) charCount[5]++;
+		if ((c == '*') && (charCount[0] == '/'))
+			charCount[6]++;
+		else if ((c == '/') && (charCount[0] == '*'))
+			charCount[6]--;
+		if ((c == '\\') && (charCount[0] == '\\')) c = ' ';
+		charCount[0] = c;
+	}
+
+	if (c == '\n') {
+		s[i] = c;
+		i++;
+	}
+	s[i] = '\0';
+	return i;
+}
+
+	
 //2.1
-
 //main()
 //{
 //	printf("Integer datatypes:\n");
